@@ -1,13 +1,13 @@
 ﻿@model CursoMVC.Models.Category
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detailhes";
 }
 
-<h1>Details</h1>
+<h1 class="text-center">Detailhes</h1>
 
 <div>
-    <h4>Category</h4>
+    <h4>Categoria</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -19,6 +19,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-outline-danger mr-2" asp-action="Edit" asp-route-id="@Model.Id">Editar</a> 
+    <a class="btn btn-outline-info" asp-action="Index">Voltar</a>
 </div>
