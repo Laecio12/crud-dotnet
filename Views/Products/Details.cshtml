@@ -1,0 +1,36 @@
+﻿@model CursoMVC.Models.Product
+
+@{
+    ViewData["Title"] = "Detailhes | Produtos";
+}
+
+<h1 class="text-center">Detailhes</h1>
+
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Category.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-outline-danger" asp-action="Edit" asp-route-id="@Model.Id">Editar</a> 
+    <a class="btn btn-outline-info" asp-action="Index">Voltar</a>
+</div>
